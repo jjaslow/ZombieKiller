@@ -29,7 +29,7 @@ public class ZombieCreator : MonoBehaviour
     {
         floor = Instantiate(floorCenterPrefab, mainCam.transform.position, Quaternion.identity);
 
-        zombieWalkSpeed = 1f;
+        zombieWalkSpeed = .8f;
         zombieRepeatTime = 5f;
 
         StartCoroutine(InvokeZombie());
@@ -123,6 +123,11 @@ public class ZombieCreator : MonoBehaviour
     public void UserQuits()
     {
         Application.Quit();
+    }
+
+    public Vector3 GetFloorPosition()
+    {
+        return floorPosition;
     }
 
 }

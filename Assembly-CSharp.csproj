@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Scripts\HighlightButton.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Input\SpeechVisualFeedback.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\LeapCoreAssetsDetector.cs" />
@@ -66,6 +63,7 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\DoNotRender.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\TransportToRespawnLocation.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\EyeCalibrationChecker.cs" />
+    <Compile Include="Assets\Scripts\GunGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoBasicSetup\Scripts\FollowEyeGazeGazeProvider.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\TetheredPlacement.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\Utils.cs" />
@@ -92,6 +90,7 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - SpatialAwareness\Scripts\ClearSpatialObservations.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\FollowEyeGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\OnSelectVisualizerInputController.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\SolverExampleManager.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\BlendOut.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\UserInputPlayback.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\FaceUser.cs" />
@@ -109,6 +108,8 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\SnapTo.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\LeapMotionOrientationDisplay.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\UserInputRecorderUIController.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\HideTapToPlaceLabel.cs" />
+    <Compile Include="Assets\Scripts\Grenades.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetSelections\Scripts\TargetGroupIterator.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\AsyncHelpers.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\GrabTouchExample.cs" />
@@ -132,10 +133,13 @@
     <Compile Include="Assets\Scripts\HitBehaviorDestroyOnSelectjj.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\OnLoadStartScene.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\HandInteractionTouchRotate.cs" />
-    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\HideTapToPlaceLabel.cs" />
-    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\SolverExampleManager.cs" />
-    <Compile Include="Assets\Scripts\GunGaze.cs" />
-    <Compile Include="Assets\Scripts\Grenades.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -164,6 +168,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\MRTK\Shaders\DepthBufferPostProcess.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -989,6 +994,12 @@
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
