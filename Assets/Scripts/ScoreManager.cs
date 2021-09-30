@@ -28,6 +28,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text livesText;
     [SerializeField] TMP_Text grenadesText;
+    [SerializeField] HighlightButton grenadeButton;
 
     [Space]
     [SerializeField] int startingLives;
@@ -61,6 +62,15 @@ public class ScoreManager : MonoBehaviour
         grenades += change;
 
         grenadesText.text = "Grenades: " + grenades.ToString();
+
+        if(grenades>0)
+        {
+            grenadeButton.SetSecondaryInitialColor(Color.green);
+        }
+        else
+        {
+            grenadeButton.ClearSecondaryInitialColor();
+        }
     }
 
     public int GetAvailableGrenades()

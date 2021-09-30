@@ -363,6 +363,7 @@ MonoBehaviour:
   scoreText: {fileID: 1622934827}
   livesText: {fileID: 344898158}
   grenadesText: {fileID: 1366137902}
+  grenadeButton: {fileID: 685556311}
   startingLives: 4
 --- !u!4 &102575600
 Transform:
@@ -945,7 +946,7 @@ GameObject:
   - component: {fileID: 271355538}
   - component: {fileID: 271355537}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Blood Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26566,6 +26567,7 @@ GameObject:
   - component: {fileID: 685556313}
   - component: {fileID: 685556312}
   - component: {fileID: 685556311}
+  - component: {fileID: 685556317}
   m_Layer: 5
   m_Name: Grenade Button
   m_TagString: Untagged
@@ -26746,7 +26748,7 @@ MonoBehaviour:
   CanSelect: 1
   CanDeselect: 1
   VoiceCommand: 
-  voiceRequiresFocus: 1
+  voiceRequiresFocus: 0
   profiles:
   - Target: {fileID: 1030389123}
     Themes:
@@ -26785,6 +26787,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22, y: 0.24, z: 0.08}
   m_Center: {x: 0, y: 0, z: -0.02}
+--- !u!114 &685556317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685556309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b3eff181cc4244a8a14234096e62fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFocusRequired: 0
+  keywords:
+  - keyword: Grenade
+    response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1372160411}
+          m_TargetAssemblyTypeName: Grenades, Assembly-CSharp
+          m_MethodName: UseGrenade
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  persistentKeywords: 0
+  speechConfirmationTooltipPrefab: {fileID: 0}
 --- !u!1 &691692382
 GameObject:
   m_ObjectHideFlags: 0

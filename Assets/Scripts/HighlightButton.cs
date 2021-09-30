@@ -5,6 +5,7 @@ using UnityEngine;
 public class HighlightButton : MonoBehaviour
 {
     public Color initialColor;
+    Color initialColorBackup;
     public Color highlightColor;
     public Renderer buttonRenderer;
     public int materialNumber;
@@ -13,6 +14,7 @@ public class HighlightButton : MonoBehaviour
     void Start()
     {
         initialColor = buttonRenderer.material.color;
+        initialColorBackup = initialColor;
         //highlightColor = Color.red;
     }
 
@@ -33,5 +35,18 @@ public class HighlightButton : MonoBehaviour
         buttonRenderer.material.color = initialColor;
     }
 
+    public void SetSecondaryInitialColor(Color secondaryColor)
+    {
+        initialColorBackup = initialColor;
+        initialColor = secondaryColor;
+
+        if(buttonRenderer.material.color != highlightColor)
+            buttonRenderer.material.color = initialColor;
+    }
+
+    public void ClearSecondaryInitialColor()
+    {
+        initialColor = initialColorBackup;
+    }
 
 }

@@ -19,6 +19,8 @@ public class Grenades : MonoBehaviour
     [ContextMenu("UseGrenade")]
     public void UseGrenade()
     {
+        Debug.Log("tried a grenade");
+
         if (ScoreManager.Instance.GetAvailableGrenades() > 0)
         {
             ScoreManager.Instance.UpdateGrenades(-1);

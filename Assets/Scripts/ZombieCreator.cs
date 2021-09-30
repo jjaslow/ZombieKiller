@@ -63,12 +63,12 @@ public class ZombieCreator : MonoBehaviour
 
 
 
-            float scale = Random.Range(3f, 5f);
+            float scale = Random.Range(3.5f, 5f);
             int direction = Random.Range(0, 2);
             scale *= direction == 0 ? 1 : -1;
             newZombie.transform.Translate(Vector3.right * scale, Space.World);
 
-            scale = Random.Range(3f, 5f);
+            scale = Random.Range(3.5f, 5f);
             direction = Random.Range(0, 2);
             scale *= direction == 0 ? 1 : -1;
             newZombie.transform.Translate(Vector3.forward * scale, Space.World);

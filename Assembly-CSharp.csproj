@@ -140,6 +140,12 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\PointerResult\SpawnOnPointerEvent.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\DisablePointers\DisablePointersExample.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\InputData\InputDataExample.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\InputData\InputDataExampleGizmo.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\InputActions\Rotator.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\PrimaryPointer\PrimaryPointerHandlerExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -994,12 +1000,6 @@
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
