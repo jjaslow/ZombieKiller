@@ -14,6 +14,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
     {
 
         private EyeTrackingTarget myEyeTrackingTarget = null;
+        [SerializeField] AudioSource audioSource;
 
 
         private void Start()
@@ -29,6 +30,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
         public void ZombieKilled()
         {
             ZombieWalk thisZombie = GetComponentInParent<ZombieWalk>();
+            audioSource.Play();
             thisZombie.ZombieKilled();
         }
 
