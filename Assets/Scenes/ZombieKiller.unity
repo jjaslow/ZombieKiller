@@ -776,6 +776,7 @@ GameObject:
   - component: {fileID: 256863744}
   - component: {fileID: 256863739}
   - component: {fileID: 256863740}
+  - component: {fileID: 256863745}
   - component: {fileID: 256863738}
   m_Layer: 0
   m_Name: Camera
@@ -934,6 +935,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &256863745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256863736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6949d45c0d8dd45a7e508f8d2a305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &271355533
 GameObject:
   m_ObjectHideFlags: 0
@@ -91268,7 +91281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4562303371972216}
   - component: {fileID: 356090457}
-  - component: {fileID: 567768482707226785}
+  - component: {fileID: 1940257246588559}
   m_Layer: 0
   m_Name: SceneMenu (to switch between ET scenarios)
   m_TagString: Untagged
@@ -91276,6 +91289,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1940257246588559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940257246588558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee03dd1e7aa3e184d8938246d30727a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
+  RotationThreshInDegrees: 3
 --- !u!4 &4562303371972216
 Transform:
   m_ObjectHideFlags: 0
@@ -96407,20 +96434,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &567768482707226785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940257246588558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee03dd1e7aa3e184d8938246d30727a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 0.8
-  RotationThreshInDegrees: 3
 --- !u!4 &700428921517448194
 Transform:
   m_ObjectHideFlags: 0
