@@ -52,6 +52,10 @@ public class ZombieCreator : MonoBehaviour
             //if (newZombie.transform.position.y >= mainCam.transform.position.y)
             //    Destroy(newZombie);
 
+            //if grenade/game over during yield
+            if (newZombie == null)
+                yield break;
+
             Rigidbody rb = newZombie.GetComponent<Rigidbody>();
             //rb.useGravity = false;
             Destroy(rb);
