@@ -20,12 +20,12 @@
 		Pass
 		{
 			//JJ: was Off
-			ZWrite On
+			ZWrite Off
 
 			//Regular alpha blending
 
 			//JJ was SrcAlpha OneMinusSrcAlpha
-			Blend Off
+			Blend SrcAlpha OneMinusSrcAlpha
 
 			CGPROGRAM
 			// required to use ComputeScreenPos()

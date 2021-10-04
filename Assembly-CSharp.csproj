@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>WSAPlayer:21</UnityBuildTarget>
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\HighlightButton.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Input\SpeechVisualFeedback.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\ChangeRenderMode.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\ChangeSize.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoScrollPanZoom\Scripts\PanZoomRectTransf.cs" />
+    <Compile Include="Assets\VerticalFog\Scripts\DepthTexture.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - PulseShader\Scripts\HideOnDevice.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\RotateWithPan.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\SnapTo.cs" />
@@ -146,7 +150,6 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\OnLoadStartScene.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\HandInteractionTouchRotate.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\VerticalFog\Scripts\DepthTexture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
