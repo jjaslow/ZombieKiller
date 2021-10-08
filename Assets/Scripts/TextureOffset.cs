@@ -9,9 +9,15 @@ public class TextureOffset : MonoBehaviour
     [SerializeField] float scrollSpeed = .5f;
     Renderer rend;
 
+    [SerializeField] Texture2D[] textures;
+
+
     void Start()
     {
         rend = GetComponent<Renderer>();
+
+        int index = Random.Range(0, textures.Length);
+        rend.material.SetTexture("_MainTex", textures[index]);
     }
 
     void Update()
@@ -20,6 +26,9 @@ public class TextureOffset : MonoBehaviour
         float offsetY = Mathf.Cos(Time.time * scrollSpeed);      //scrollSpeed;
         rend.material.SetTextureOffset("_MainTex", new Vector2(offset, offsetY));
     }
+
+
+
 }
 
 

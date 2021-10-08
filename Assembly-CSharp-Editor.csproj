@@ -705,6 +705,9 @@
  <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.HandPhysics">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.HandPhysics.dll</HintPath>
  </Reference>
+ <Reference Include="Microsoft.MixedReality.Toolkit.PlaneFinding">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.PlaneFinding.dll</HintPath>
+ </Reference>
  <Reference Include="Microsoft.MixedReality.Toolkit">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.dll</HintPath>
  </Reference>
@@ -764,6 +767,9 @@
  </Reference>
  <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.Tracking">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.Tracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.MixedReality.SceneUnderstanding.Projections.Editor">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.SceneUnderstanding.Projections.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARSubsystems.Editor">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
@@ -914,12 +920,6 @@
  </Reference>
  <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.PlaneFinding">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.PlaneFinding.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.SceneUnderstanding.Projections.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.SceneUnderstanding.Projections.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

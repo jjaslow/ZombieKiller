@@ -665,11 +665,11 @@
  <Reference Include="Microsoft.MixedReality.Toolkit.Examples">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Examples.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

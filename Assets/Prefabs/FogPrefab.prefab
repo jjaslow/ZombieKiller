@@ -157,3 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 0.0425
+  textures:
+  - {fileID: 2800000, guid: b05a597675de6b043bda2282c0cd526c, type: 3}
+  - {fileID: 2800000, guid: 38d89ab81aabb3847b81ad5ed790075e, type: 3}
