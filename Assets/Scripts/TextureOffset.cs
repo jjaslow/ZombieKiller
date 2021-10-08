@@ -11,6 +11,8 @@ public class TextureOffset : MonoBehaviour
 
     [SerializeField] Texture2D[] textures;
 
+    int direction1;
+    int direction2;
 
     void Start()
     {
@@ -18,12 +20,21 @@ public class TextureOffset : MonoBehaviour
 
         int index = Random.Range(0, textures.Length);
         rend.material.SetTexture("_MainTex", textures[index]);
+
+        int dirIndex = Random.Range(0, 2);
+        direction1 = dirIndex == 0 ? -1 : 1;
+        dirIndex = Random.Range(0, 2);
+        direction2 = dirIndex == 0 ? -1 : 1;
+
+        float offset = Mathf.Sin(Random.Range(0,1f));      //scrollSpeed;
+        float offsetY = Mathf.Cos(Random.Range(0, 1f));      //scrollSpeed;
+        rend.material.SetTextureOffset("_MainTex", new Vector2(offset, offsetY));
     }
 
     void Update()
     {
-        float offset = Mathf.Sin(Time.time * scrollSpeed);      //scrollSpeed;
-        float offsetY = Mathf.Cos(Time.time * scrollSpeed);      //scrollSpeed;
+        float offset = Mathf.Sin(Time.time * scrollSpeed * direction1);      //scrollSpeed;
+        float offsetY = Mathf.Cos(Time.time * scrollSpeed * direction2);      //scrollSpeed;
         rend.material.SetTextureOffset("_MainTex", new Vector2(offset, offsetY));
     }
 

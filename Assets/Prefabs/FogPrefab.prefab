@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 7055099827542530060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 0.05}
   m_Children: []
   m_Father: {fileID: 880632351993470307}
   m_RootOrder: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073a35eab1dc0194bbad0cd2b4e11c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.0425
+  scrollSpeed: 0.0625
   textures:
   - {fileID: 2800000, guid: b05a597675de6b043bda2282c0cd526c, type: 3}
   - {fileID: 2800000, guid: 38d89ab81aabb3847b81ad5ed790075e, type: 3}
