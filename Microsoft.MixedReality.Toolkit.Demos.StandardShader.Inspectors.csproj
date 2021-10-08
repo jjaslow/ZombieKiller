@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9A308339-5345-D07A-83FC-6869C612AF71}</ProjectGuid>
+    <ProjectGuid>{FF3CA452-65D7-8803-06A2-DA9A5564E594}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -47,7 +47,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Editor\InvertedSphere.cs" />
+     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - StandardShader\Scripts\Editor\MaterialMatrixEditor.cs" />
+     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - StandardShader\Scripts\Editor\AssemblyInfo.cs" />
+     <None Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - StandardShader\Scripts\Editor\MRTK.Demos.StandardShader.Inspectors.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -660,279 +662,23 @@
  <Reference Include="System.Xml.XPath.XDocument">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
+ <Reference Include="Microsoft.MixedReality.Toolkit.Examples">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Examples.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.InputSystem.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.SDK.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.SpatialAudio.Spatializer">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.SpatialAudio.Spatializer.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.Tracking.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.Tracking.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK.WindowsMixedReality">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.XRSDK.WindowsMixedReality.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Gltf">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Gltf.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputAnimation">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.InputAnimation.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.TeleportSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.TeleportSystem.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.OpenXR.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.OpenXR.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.HandPhysics">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.HandPhysics.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSystem.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.InputSystem.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.SceneSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.SceneSystem.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.Handtracking.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.Handtracking.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.SceneTransitionService">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.SceneTransitionService.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.SpatialAudio.Spatializer.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.SpatialAudio.Spatializer.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.InteractionSubsystems">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.InteractionSubsystems.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor.Interactive">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor.Interactive.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.WindowsSceneUnderstanding.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.WindowsSceneUnderstanding.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.LeapMotion.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.LeapMotion.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.WindowsMixedReality.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Editor.Utilities">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Editor.Utilities.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSimulation">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.InputSimulation.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.WindowsSceneUnderstanding">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.WindowsSceneUnderstanding.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.Tracking">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Extensions.Tracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARSubsystems.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.ARSubsystems.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.Management">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARSubsystems">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Editor.Inspectors">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Editor.Inspectors.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Experimental.Interactive">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.SDK.Experimental.Interactive.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.LeapMotion">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.LeapMotion.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Shared">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Shared.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARFoundation.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.SDK">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.SDK.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Examples">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Examples.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.WindowsMixedReality">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.WindowsMixedReality.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.CameraSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.CameraSystem.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.Management.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.InputSimulation.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.InputSimulation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.OpenXR">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.OpenXR.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Subsystem.Registration">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.OpenXR">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.OpenXR.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.XRSDK">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.XRSDK.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.TestHelpers">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.TestHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.ObjectMeshObserver">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.ObjectMeshObserver.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Editor.ClassExtensions">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Editor.ClassExtensions.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.UnityAR">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.UnityAR.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Providers.UnityAR.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Providers.UnityAR.Editor.dll</HintPath>
- </Reference>
- <Reference Include="MRTK.OpenXR.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/MRTK.OpenXR.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Services.DiagnosticsSystem">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Services.DiagnosticsSystem.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Async">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Async.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Gltf.Importers">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Gltf.Importers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.SDK.Experimental.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.OpenXR.Features.RuntimeDebugger.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARFoundation">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.StandardAssets.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.StandardAssets.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.Toolkit.PlaneFinding">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.Toolkit.PlaneFinding.dll</HintPath>
- </Reference>
- <Reference Include="Microsoft.MixedReality.SceneUnderstanding.Projections.Editor">
- <HintPath>D:/Unity Projects 2/HoloLens2/HoloLens2/Library/ScriptAssemblies/Microsoft.MixedReality.SceneUnderstanding.Projections.Editor.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{86C09353-86BE-D272-F094-EC52294E67EC}</Project>
-      <Name>Assembly-CSharp</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.csproj">
-      <Project>{FF3CA452-65D7-8803-06A2-DA9A5564E594}</Project>
-      <Name>Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

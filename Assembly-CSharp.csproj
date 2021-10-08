@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Scripts\HighlightButton.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Input\SpeechVisualFeedback.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\LeapCoreAssetsDetector.cs" />
@@ -67,9 +64,11 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\DoNotRender.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\TransportToRespawnLocation.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\EyeCalibrationChecker.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\Displace.cs" />
     <Compile Include="Assets\Scripts\GunGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoBasicSetup\Scripts\FollowEyeGazeGazeProvider.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\DisablePointers\DisablePointersExample.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\PlanarReflection.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\TetheredPlacement.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\Utils.cs" />
@@ -86,6 +85,7 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Utils\KeepThisAlive.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Targeting\TargetEventArgs.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\ParticleHeatmapParticleData.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\GerstnerDisplace.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\GrabReleaseDetector.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoScrollPanZoom\Scripts\TargetMoveToCamera.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoScrollPanZoom\Scripts\ScrollRectTransf.cs" />
@@ -93,9 +93,11 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\UserInputRecorder.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\LogStructureEyeGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\GestureTester.cs" />
+    <Compile Include="Assets\Scripts\TextureOffset.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - SpatialAwareness\Scripts\ClearSpatialObservations.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\FollowEyeGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\InputActions\Rotator.cs" />
+    <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Experimental - SceneUnderstanding\Scripts\DemoSceneUnderstandingController.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\OnSelectVisualizerInputController.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\SolverExampleManager.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\BlendOut.cs" />
@@ -121,17 +123,21 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\LeapMotionOrientationDisplay.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\UserInputRecorderUIController.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Solvers\Scripts\HideTapToPlaceLabel.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Scripts\Grenades.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetSelections\Scripts\TargetGroupIterator.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\AsyncHelpers.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\GrabTouchExample.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\SpecularLighting.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\SolverTrackedTargetType.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\WaterBase.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - Input\Scenes\PrimaryPointer\PrimaryPointerHandlerExample.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetPositioning\Scripts\TriggerZonePlaceObjsWithin.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\LaunchUri.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\MeshContainer.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\Targeting\DwellSelection.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\OnLookAtShowHoverFeedback.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\MoveWithCamera.cs" />
@@ -144,12 +150,14 @@
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoVisualizer\Scripts\InputPointerVisualizer.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoScrollPanZoom\Scripts\PanZoomTexture.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\DemoTargetSelections\Scripts\HitBehaviorDestroyOnSelect.cs" />
+    <Compile Include="Assets\MRTK\Shaders\Water\Scripts\Water.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\OnLookAtRotateByEyeGaze.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\DemoTouchButton.cs" />
     <Compile Include="Assets\Scripts\HitBehaviorDestroyOnSelectjj.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - EyeTracking\General\Scripts\TargetBehaviors\OnLoadStartScene.cs" />
     <Compile Include="Assets\Samples\Mixed Reality Toolkit Examples\2.7.2\Demos - HandTracking\Scripts\HandInteractionTouchRotate.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\CloudCubeTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -163,6 +171,7 @@
     <None Include="Assets\MRTK\Shaders\InvisibleShader.shader" />
     <None Include="Assets\VerticalFog\Shader\SimpleVerticalFog.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\MRTK\Shaders\Clouds\Clouds.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -173,9 +182,11 @@
     <None Include="Assets\MixedRealityToolkit.Generated\link.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\VerticalFog\Shader\MeshFogWithTexture.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\MRTK\Shaders\MixedRealityStandard.shader" />
     <None Include="Assets\MRTK\Shaders\MixedRealityTextMeshPro.shader" />
+    <None Include="Assets\MRTK\Shaders\Water\FXWaterPro.shader" />
     <None Include="Assets\MRTK\Shaders\MRTK_Wireframe.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\VerticalFog\ReadMe.txt" />
@@ -184,6 +195,7 @@
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\MRTK\Shaders\DepthBufferPostProcess.shader" />
+    <None Include="Assets\Materials\ColorAndDepthOnly.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\MRTK\Shaders\MixedRealityShaderUtils.cginc" />
@@ -798,6 +810,9 @@
     <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.HandPhysics">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Extensions.HandPhysics.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.MixedReality.Toolkit.PlaneFinding">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.PlaneFinding.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.dll</HintPath>
     </Reference>
@@ -857,6 +872,9 @@
     </Reference>
     <Reference Include="Microsoft.MixedReality.Toolkit.Extensions.Tracking">
       <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.Toolkit.Extensions.Tracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MixedReality.SceneUnderstanding.Projections.Editor">
+      <HintPath>Library\ScriptAssemblies\Microsoft.MixedReality.SceneUnderstanding.Projections.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll</HintPath>
@@ -1010,6 +1028,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.csproj">
+      <Project>{FF3CA452-65D7-8803-06A2-DA9A5564E594}</Project>
+      <Name>Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

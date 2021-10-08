@@ -1,4 +1,4 @@
-﻿Shader "NLS/VerticalFogWithTexture"
+﻿Shader "NLS/MeshFogWithTexture"
 {
 	Properties 
 	{
@@ -14,18 +14,15 @@
 		_FogAnimationSpeed ("Fog Speed", Vector) = (0,0,0,0)
 	}
 	SubShader
-	{//JJ:: was  "Queue"="Transparent" "RenderType"="Transparent"
-		Tags { "Queue" = "Transparent" "RenderType"="Opaque"  }
+	{
+		Tags { "Queue"="Transparent" "RenderType"="Transparent"  }
 		LOD 100
 		Pass
 		{
-			//JJ: was Off
-			ZWrite On
+			ZWrite Off
 
 			//Regular alpha blending
-
-			//JJ was SrcAlpha OneMinusSrcAlpha
-			Blend Off
+			Blend SrcAlpha OneMinusSrcAlpha
 
 			CGPROGRAM
 			// required to use ComputeScreenPos()
@@ -58,21 +55,52 @@
 				float4 pos : SV_POSITION;
 				float4 screenPos : TEXCOORD1;
 				float4 animteduv : TEXCOORD2;
+				float4 screenUV : TEXCOORD3;
+				float4 screenUV2 : TEXCOORD4;
 			};
-			
+
+			inline void ObjSpaceUVOffset(inout float2 screenUV, in float screenRatio, float2 textureST)
+            {
+
+                float2 objPos = float2(UNITY_MATRIX_MV[3].x * screenRatio, 
+                                       UNITY_MATRIX_MV[3].y);
+
+                float offsetFactorX = 0.5;
+                float offsetFactorY = offsetFactorX * screenRatio;
+                // apply tiling from properties
+                offsetFactorX *= textureST.x;
+                offsetFactorY *= textureST.y;
+
+                // sign(UNITY_MATRIX_P[1].y) is different in Scene and Game views
+                screenUV.x -= objPos.x * offsetFactorX * sign(UNITY_MATRIX_P[1].y);
+                screenUV.y -= objPos.y * offsetFactorY * sign(UNITY_MATRIX_P[1].y);
+            }
+
+			void TextureScalingOffset(inout float2 scrUV, float2 textureST)
+            {
+			    float scrRatio = _ScreenParams.y / _ScreenParams.x;
+			    scrUV.y *= scrRatio;
+			    ObjSpaceUVOffset(scrUV, scrRatio, textureST); 
+            }
+
 			vertexOutput vert(vertexInput input)
 			{
 			  vertexOutput output;
 			
 			  // convert obj-space position to camera clip space
 			  output.pos = UnityObjectToClipPos(input.vertex);
-			  float2 newUV1 = TRANSFORM_TEX(input.uv, _FogTexture1);
-			  float2 newUV2 = TRANSFORM_TEX(input.uv, _FogTexture2);
 
 			  // compute depth (screenPos is a float4)
 			  output.screenPos = ComputeScreenPos(output.pos);
-			  output.animteduv.xy = newUV1 + float2(_FogAnimationSpeed.xy)*_Time.x;
-			  output.animteduv.zw = newUV2 + float2(_FogAnimationSpeed.zw)*_Time.x;
+			  output.animteduv.xy =  float2(_FogAnimationSpeed.xy)*_Time.x;
+			  output.animteduv.zw =  float2(_FogAnimationSpeed.zw)*_Time.x;
+			  
+			  output.screenUV = ComputeScreenPos(output.pos);
+			  output.screenUV.xy = TRANSFORM_TEX(output.screenUV, _FogTexture1);
+			  
+			  output.screenUV2 = ComputeScreenPos(output.pos);
+			  output.screenUV2.xy = TRANSFORM_TEX(output.screenUV2, _FogTexture2);
+			  
 			  return output;
 			}
 		
@@ -82,9 +110,19 @@
 			  float4 depthSample = SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, input.screenPos);
 			  float depth = LinearEyeDepth(depthSample).r;
 
+			  // Screenspace UV
+			  float2 screenUV = input.screenUV.xy / input.screenUV.w;
+              TextureScalingOffset(screenUV, _FogTexture1_ST.xy);			
+			  float2 screenUV2 = input.screenUV2.xy / input.screenUV2.w;
+              TextureScalingOffset(screenUV2, _FogTexture2_ST.xy);
+
+			  // animate uvs
+			  screenUV += input.animteduv.xy;
+			  screenUV2 += input.animteduv.zw;
+
 			  // sample fog texture with offsetted uv
-			  float4 fogTexA = tex2D(_FogTexture1, input.animteduv.xy);
-			  float4 fogTexB = tex2D(_FogTexture2, input.animteduv.zw);
+			  float4 fogTexB = tex2D(_FogTexture2, screenUV2);
+			  float4 fogTexA = tex2D(_FogTexture1, screenUV);
 
 			  // caculate depth value
 			  float foamLine = saturate(_DepthFactor * (depth - input.screenPos.w));

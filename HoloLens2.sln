@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{86C09353-86BE-D272-F094-EC52294E67EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors", "Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.csproj", "{FF3CA452-65D7-8803-06A2-DA9A5564E594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9A308339-5345-D07A-83FC-6869C612AF71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{86C09353-86BE-D272-F094-EC52294E67EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C09353-86BE-D272-F094-EC52294E67EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C09353-86BE-D272-F094-EC52294E67EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF3CA452-65D7-8803-06A2-DA9A5564E594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF3CA452-65D7-8803-06A2-DA9A5564E594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF3CA452-65D7-8803-06A2-DA9A5564E594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF3CA452-65D7-8803-06A2-DA9A5564E594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A308339-5345-D07A-83FC-6869C612AF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A308339-5345-D07A-83FC-6869C612AF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A308339-5345-D07A-83FC-6869C612AF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A308339-5345-D07A-83FC-6869C612AF71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
